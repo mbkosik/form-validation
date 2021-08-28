@@ -1,0 +1,98 @@
+* {
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    background-color: lightblue;
+}
+
+.register {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column; 
+    min-height: 40vh; 
+    min-width: 20vw;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.28);
+}
+
+.error {
+    box-shadow: 5px 5px 15px 5px rgba(255, 38, 38,0.28);
+    animation: error .5s linear;
+}
+
+@keyframes error {
+    0% {left: 50%; transform: translate(-50%, -50%);}
+    25% {left: 48%; transform: translate(-50%, -50%);};
+    50% {left: 50%; transform: translate(-50%, -50%);};
+    75% {left: 54%; transform: translate(-50%, -50%);};
+}
+
+.register__heading {
+    text-align: center;
+    margin: 1em;
+}
+
+.register__form {
+    padding: 1em;
+}
+
+input, label {
+    display: block;
+    width: calc(100% - 0.4em); 
+    box-sizing: border-box;
+    padding: 0.2em;
+    margin: 0.1em 0.2em;
+}
+
+input[type=button], input[type=submit], .close {
+    width: unset;
+    display: inline;
+    float: right;
+    background-color: #77ACF1;
+    color: white; 
+    border: unset;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 10px 5px 0 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+input[type=button]:hover, input[type=submit]:hover, .close:hover {
+    background-color: white;
+    color: #77ACF1; 
+}
+
+.register__form .error-text {
+    margin: 5px 0 0 10px;
+    font-size: 14px;
+    color: #FF2626;
+}
+
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 35vw;
+    min-height: 15vh;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid black;
+    transition: 0.5s;
+}
+
+.show-popup {
+    top: 15%;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="register">
+        <div class="register__heading">
+            <h2>Zarejestruj się!</h2>
+        </div>
+        <form class="register__form">
+            <label for="username">Nazwa użytkownika: </label>
+            <input id="username" type="text" class="form-data" placeholder="Podaj nazwę użytkownika">
+            <label for="password">Hasło:</label>
+            <input id="password" type="password" class="form-data" placeholder="Podaj hasło">
+            <label for="password-repeat">Powtórz hasło:</label>
+            <input id="password-repeat" type="password" class="form-data" placeholder="Powtórz hasło">
+            <label for="email">Adres e-mail:</label>
+            <input id="email" type="email" class="form-data" placeholder="Podaj adres e-mail">
+            <input type="submit" id="send" value="Wyślij">
+            <input type="button" id="clear" value="Wyczyść">
+        </form>
+    </div>
+
+    <div class="popup">
+        <p>Formularz został poprawnie wysłany!</p>
+        <button class="close">Zamknij</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
