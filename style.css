@@ -27,10 +27,11 @@ body {
 }
 
 @keyframes error {
-    0% {left: 50%; transform: translate(-50%, -50%);}
-    25% {left: 48%; transform: translate(-50%, -50%);};
-    50% {left: 50%; transform: translate(-50%, -50%);};
-    75% {left: 54%; transform: translate(-50%, -50%);};
+    0% {left: 50%;}
+    25% {left: 48%;};
+    50% {left: 50%;};
+    75% {left: 54%;};
+    100% {left: 50%};
 }
 
 .register__heading {

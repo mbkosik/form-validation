@@ -14,10 +14,7 @@ const registerForm = document.querySelector(".register__form");
 const errorText = document.createElement("p");
 let condition = false; 
 
-const checkForm = (e) => {
-    e.preventDefault(); 
-    resetError(); 
-
+function checkForm() {
     for (i = 0; i < inputs.length; i++) {
         if (inputs[i].value === "") {
             return displayError("Uzupełnij puste pola");
@@ -42,20 +39,22 @@ const checkForm = (e) => {
     if (regexTest === false) {
         return displayError("E-mail jest niepoprawny");
     }
-
-    submitForm();
 }
 
 function clearForm() {
     inputs.forEach((input) => {
         input.value = "";
     })
-    resetError();
 }
 
-function submitForm() {
+function submitForm(e) {
+    e.preventDefault(); 
+    resetError(); 
+    checkForm();
+    if (condition === false) { 
+        popup.classList.add("show-popup")
+    };
     clearForm();
-    popup.classList.add("show-popup");
 }
 
 function closePopUp() {
@@ -80,6 +79,6 @@ function resetError() {
     }
 }
 
-send.addEventListener("click", checkForm); 
+send.addEventListener("click", submitForm); 
 clear.addEventListener("click", clearForm);
 close.addEventListener("click", closePopUp);
